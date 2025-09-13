@@ -1,20 +1,26 @@
 {
   "name": "copy-that",
   "version": "0.1.0",
-  "private": true,
+  "description": "A simple, customizable code copy button component for React projects.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build && tsc",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "lucide-react": "^0.544.0",
     "motion": "^12.23.12",
     "next": "15.5.3",
     "prism-react-renderer": "^2.4.1",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -26,5 +32,17 @@
     "eslint-config-next": "15.5.3",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "keywords": [
+    "react",
+    "copy",
+    "component",
+    "code"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
 }
