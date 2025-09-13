@@ -3,11 +3,16 @@
 import { useState, useRef, useEffect } from 'react';
 import { Highlight, themes, Language } from 'prism-react-renderer';
 import { Check, ClipboardIcon } from 'lucide-react';
+import { PrismTheme } from 'prism-react-renderer';
 
 interface CopyCodeProps {
   code: string;
   language?: Language;
+  theme?: PrismTheme;           // <- add this
+  copiedIcon?: React.ReactNode; // optional custom icon
+  copyIcon?: React.ReactNode;   // optional custom icon
 }
+
 
 export default function CopyCode({ code, language = 'tsx' }: CopyCodeProps) {
   const [copied, setCopied] = useState(false);
